@@ -1,7 +1,8 @@
 import numpy as np
 import pandas as pd
 from KNearestRegressor import KNearestRegressors
-from  sklearn.metrics import r2_score
+from sklearn.metrics import r2_score
+from sklearn.metrics import accuracy_score
 
 
 #taking  inputs
@@ -25,7 +26,8 @@ knn.fit(X_train,y_train)
 #using the predict() function
 knn.predict(np.array(X_test).reshape(len(X_test), len(X_test[0])))
 
-print(round((r2_score(y_test, y_pred) * 100))
+print(round((r2_score(y_test, y_pred) * 100)))
+print(round((accuracy_score(y_test,y_pred)*100)))
 
 
 
